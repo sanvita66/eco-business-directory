@@ -11,68 +11,28 @@ body {
 header {
     background-color: black;
     padding: 10px 0;
+    text-align: center;
 }
 
-.container {
-    width: 90%;
+/* Logo */
+.logo img {
+    width: 150px; /* Adjusted size */
+    height: auto;
+    display: block;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-/* Navigation */
-nav {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-}
-
-.vl {
-    border-left: 3px solid white;
-    height: 20px;
-}
-
-/* User Options */
-.user-options {
-    display: flex;
-    align-items: center;
-}
-
-.user-options a {
-    color: #fff;
-    margin-left: 15px;
-    text-decoration: none;
-}
-
-.user-options .add-business {
-    background: #7FB800;
-    padding: 10px;
-    border-radius: 5px;
 }
 
 /* Hero Section */
 .hero {
-    position: relative;
-    height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .hero h2 {
-    font-size: 3vw; /* Responsive text */
+    font-size: 2rem; /* Responsive text */
     margin-bottom: 10px;
+    line-height: 1.3;
 }
 
 .hero h2 span {
@@ -85,8 +45,11 @@ nav a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 10px;
     max-width: 600px;
-    width: 100%;
+    margin: auto;
 }
 
 .search-bar input {
@@ -106,7 +69,7 @@ nav a {
     cursor: pointer;
 }
 
-/* Categories Section */
+/* Categories */
 .category-prompt {
     margin-top: 20px;
     font-size: 1.2em;
@@ -142,30 +105,12 @@ nav a {
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .search-bar {
-        flex-direction: column;
-    }
-
-    .search-bar input, .search-bar button {
-        width: 100%;
-    }
-
     .hero h2 {
-        font-size: 5vw; /* Adjusted for mobile */
+        font-size: 1.8rem; /* Smaller size for mobile */
     }
 
     .categories {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -175,7 +120,7 @@ nav a {
     }
 
     .categories {
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
@@ -184,5 +129,7 @@ nav a {
 
     
 
+    
+
    
-        g
+        
