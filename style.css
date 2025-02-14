@@ -1,0 +1,125 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("images\\mountain.png");
+    background-position:center;
+    background-size: cover;
+ } 
+
+header {
+    background-color: black;
+}
+
+.container {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}    
+
+ nav a{
+    color: white;
+    margin: 0 70px;
+    text-decoration: none;
+ }
+
+   .vl{
+    border-left: 3px solid white;
+    height: 20px;
+   }
+
+ .user-options {
+    display: flex;
+    align-items: center;
+  }  
+
+.user-options a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.user-options .add-business {
+    background: #7FB800;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero .overlay {
+    position: absolute;
+    }
+
+.hero .content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero h2 span {
+    color: #7FB800;
+}
+
+.hero .search-bar {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .search-bar input {
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.hero .search-bar button {
+    padding: 10px 20px;
+    background: #7FB800;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.category-prompt {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+}
+
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.categories a {
+    width: 150px;
+    height: 150px;
+    background-color: #7FB800;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.categories a:hover {
+    background: #6aa600;
+}
