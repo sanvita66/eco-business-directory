@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,31 +7,30 @@ body {
     background-size: cover;
 }
 
+/* Header */
 header {
     background-color: black;
+    padding: 10px 0;
 }
 
 .container {
     width: 90%;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    flex-wrap: wrap; /* Ensures elements wrap on small screens */
 }
 
+/* Navigation */
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
-    text-align: center;
 }
 
 nav a {
     color: white;
-    margin: 5px;
+    margin: 0 15px;
     text-decoration: none;
 }
 
@@ -39,44 +39,39 @@ nav a {
     height: 20px;
 }
 
+/* User Options */
 .user-options {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .user-options a {
     color: #fff;
-    margin-left: 20px;
+    margin-left: 15px;
     text-decoration: none;
 }
 
 .user-options .add-business {
     background: #7FB800;
-    padding: 10px 10px;
+    padding: 10px;
     border-radius: 5px;
 }
 
+/* Hero Section */
 .hero {
     position: relative;
     height: 70vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.hero .overlay {
-    position: absolute;
-}
-
-.hero .content {
-    position: relative;
-    z-index: 1;
+    color: white;
+    padding: 20px;
 }
 
 .hero h2 {
-    font-size: 3em;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
@@ -84,26 +79,22 @@ nav a {
     color: #7FB800;
 }
 
-.hero .search-bar {
+/* Search Bar */
+.search-bar {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    margin: auto;
+    gap: 10px;
 }
 
-.hero .search-bar input {
-    flex: 1;
-    min-width: 150px;
+.search-bar input {
     padding: 10px;
-    margin: 5px;
+    width: 250px;
     border: none;
     border-radius: 5px;
 }
 
-.hero .search-bar button {
+.search-bar button {
     padding: 10px 20px;
     background: #7FB800;
     border: none;
@@ -112,57 +103,64 @@ nav a {
     cursor: pointer;
 }
 
+/* Categories Section */
 .category-prompt {
     margin-top: 20px;
     font-size: 1.2em;
     color: white;
+    text-align: center;
 }
 
 .categories {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin: 20px;
     padding: 10px;
-    width: 90%;
-    margin: auto;
+    justify-content: center;
 }
 
 .categories a {
-    text-align: center;
-    font-size: 14px;
     background-color: #7FB800;
-    padding: 15px;
-    margin: 10px;
+    padding: 20px;
     border-radius: 5px;
     color: #fff;
     text-decoration: none;
+    text-align: center;
     transition: background 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .categories a:hover {
     background: #6aa600;
 }
 
-@media (max-width: 768px) {
-    .hero {
-        height: 50vh;
-    }
-    .hero h2 {
-        font-size: 2em;
-    }
-}
-
-@media (max-width: 480px) {
+/* Responsive Design */
+@media screen and (max-width: 768px) {
     .container {
         flex-direction: column;
         text-align: center;
     }
-    .user-options {
-        justify-content: center;
+
+    nav {
+        flex-direction: column;
     }
-    nav a {
-        display: block;
-        margin: 5px 0;
+
+    .search-bar {
+        flex-direction: column;
+    }
+
+    .search-bar input, .search-bar button {
+        width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
 }
-
