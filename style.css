@@ -1,10 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url("mountain.png");
-    background-position:center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("mountain.png");
+    background-position: center;
     background-size: cover;
- } 
+}
 
 header {
     background-color: black;
@@ -13,25 +13,37 @@ header {
 .container {
     width: 90%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-}    
+    padding: 10px 0;
+}
 
- nav a{
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+nav a {
     color: white;
-    margin: 0 70px;
+    margin: 5px;
     text-decoration: none;
- }
+}
 
-   .vl{
+.vl {
     border-left: 3px solid white;
     height: 20px;
-   }
+}
 
- .user-options {
+.user-options {
     display: flex;
     align-items: center;
-  }  
+    justify-content: center;
+}
 
 .user-options a {
     color: #fff;
@@ -56,7 +68,7 @@ header {
 
 .hero .overlay {
     position: absolute;
-    }
+}
 
 .hero .content {
     position: relative;
@@ -73,15 +85,20 @@ header {
 }
 
 .hero .search-bar {
-    margin: 20px 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
 }
 
 .hero .search-bar input {
+    flex: 1;
+    min-width: 150px;
     padding: 10px;
-    margin: 0 5px;
+    margin: 5px;
     border: none;
     border-radius: 5px;
 }
@@ -102,17 +119,19 @@ header {
 }
 
 .categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    width: 90%;
+    margin: auto;
 }
 
 .categories a {
-    width: 150px;
-    height: 150px;
+    text-align: center;
+    font-size: 14px;
     background-color: #7FB800;
-    padding: 10px 20px;
+    padding: 15px;
     margin: 10px;
     border-radius: 5px;
     color: #fff;
@@ -123,3 +142,27 @@ header {
 .categories a:hover {
     background: #6aa600;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        height: 50vh;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .user-options {
+        justify-content: center;
+    }
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
